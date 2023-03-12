@@ -11,7 +11,7 @@
 #define DEFAULT 0
 #define LOWER 1
 #define RAISE 2
-#define FUNC 3
+#define FUNCTIONAL 3
 
 /* #define FNC_TAB &lt FUNC TAB */
 /* #define LWR_SPC &lt LOWER SPACE */
@@ -91,7 +91,7 @@
    &kp RBKT  &kp Q       &kp W      &kp E       &kp R       &kp T    &kp Y &kp U       &kp I       &kp O      &kp P          &kp LBKT
    &kp GRAVE &hm LGUI A  &hm LALT S &hm LCTRL D &hm LSHFT F &kp G    &kp H &hm RSHFT J &hm RCTRL K &hm RALT L &hm RGUI SEMI  &kp SQT
    &kp CAPS  &kp Z       &kp X      &kp C       &kp V       &kp B    &kp N &kp M       &kp COMMA   &kp DOT    &kp FSLH       &kp BSLH
-                         &lt FUNC TAB &lt LOWER SPACE &lt RAISE RET   &lt RAISE ESC &lt LOWER BSPC &lt FUNC DEL
+                         &lt FUNCTIONAL TAB &lt LOWER SPACE &lt RAISE RET   &lt RAISE ESC &lt LOWER BSPC &lt FUNCTIONAL DEL
                         >;
                 };
                 lower_layer {
@@ -127,9 +127,9 @@
 // | BT_PRV | SCLK  |  F1 |  F2 |  F3 |  F12 |   | STOP | MUTE |  BT1 | BT2  | SCLK  | BT4 |
 //                        |     |     |      |   |      |      |      |
                         bindings = <
-   &kp BT_CLR &kp PAUSE_BREAK   &kp F7 &kp F8 &kp F9 &kp F10    &kp K_PP    &kp C_BRI_DN &kp C_BRI_UP &kp BT_SEL_3 &kp PAUSE_BREAK   &kp BT_CLR
-   &kp BT_NXT &hm LGUI PSCRN &hm LALT F4 &hm LCTRL F5 &hm LSHFT F6 &kp F11    &kp K_PREV  &hm RSHFT K_VOL_UP &hm RCTRL K_VOL_DN &hm RALT K_NEXT &hm RGUI PSCRN &kp BT_SEL 5
-   &kp BT_PRV &kp SLCK   &kp F1 &kp F2 &kp F3 &kp F12    &kp K_STOP2 &kp K_MUTE   &kp BT_SEL 1 &kp BT_SEL_2 &kp SLCK   &kp BT_SEL 4
+   &bt BT_CLR &kp PAUSE_BREAK   &kp F7 &kp F8 &kp F9 &kp F10    &kp K_PP    &kp C_BRI_DN &kp C_BRI_UP &bt BT_SEL 3 &kp PAUSE_BREAK   &bt BT_CLR
+   &bt BT_NXT &hm LGUI PSCRN &hm LALT F4 &hm LCTRL F5 &hm LSHFT F6 &kp F11    &kp K_PREV  &hm RSHFT K_VOL_UP &hm RCTRL K_VOL_DN &hm RALT K_NEXT &hm RGUI PSCRN &bt BT_SEL 5
+   &bt BT_PRV &kp SLCK   &kp F1 &kp F2 &kp F3 &kp F12    &kp K_STOP2 &kp K_MUTE   &bt BT_SEL 1 &bt BT_SEL 2 &kp SLCK   &bt BT_SEL 4
                     	       &trans    &trans    &trans       &trans   &trans    &trans
                         >;
                 };
