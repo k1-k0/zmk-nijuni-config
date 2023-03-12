@@ -39,7 +39,7 @@
 /* #define HML_DOWN &hm RSHFT DOWN */
 /* #define HML_UP &hm RCTRL UP */
 /* #define HML_RIGHT &hm RALT RIGHT */
-/* #define HML_APP &hm RGUI APP */
+/* #define HML_APP &hm RGUI K_APP */
 
 /* // Home row keys (raise) */
 /* #define HMR_STAR &hm LGUI ASTRK */
@@ -62,7 +62,7 @@
 /* #define HMF_RPSCRN &hm RGUI PSCRN */
 
 &mt {
-	tapping-term = <150>;
+	tapping-term = <200>;
 };
 
 / {
@@ -71,7 +71,7 @@
 		    compatible = "zmk,behavior-hold-tap";
 		    label = "HOMEROW_MODS";
 		    #binding-cells = <2>;
-		    tapping-term-ms = <150>;
+		    tapping-term-ms = <200>;
 		    quick-tap-ms = <0>;
 		    flavor = "tap-preferred";
 		    bindings = <&kp>, <&kp>;
