@@ -32,35 +32,35 @@
 #define HM_L &hm RALT L
 #define HM_SEMI &hm RGUI SEMI
 
-/* // Home row keys (lower) */
-/* #define HML_STAR &hm LGUI ASTRK */
-/* #define HML_4 &hm LALT N4 */
-/* #define HML_5 &hm LCTRL N5 */
-/* #define HML_6 &hm LSHFT N6 */
-/* #define HML_DOWN &hm RSHFT DOWN */
-/* #define HML_UP &hm RCTRL UP */
-/* #define HML_RIGHT &hm RALT RIGHT */
-/* #define HML_APP &hm RGUI K_APP */
+// Home row keys (lower)
+#define HML_STAR &hm LGUI ASTRK
+#define HML_4 &hm LALT N4
+#define HML_5 &hm LCTRL N5
+#define HML_6 &hm LSHFT N6
+#define HML_DOWN &hm RSHFT DOWN
+#define HML_UP &hm RCTRL UP
+#define HML_RIGHT &hm RALT RIGHT
+#define HML_APP &hm RGUI K_APP
 
-/* // Home row keys (raise) */
-/* #define HMR_STAR &hm LGUI ASTRK */
-/* #define HMR_DLLR &hm LALT DLLR */
-/* #define HMR_PRCNT &hm LCTRL PRCNT */
-/* #define HMR_CARET &hm LSHFT CARET */
-/* #define HMR_LPAR &hm RSHFT LPAR */
-/* #define HMR_RPAR &hm RCTRL RPAR */
-/* #define HMR_LBKT &hm RALT LBKT */
-/* #define HMR_RBKT &hm RGUI RBKT */
+// Home row keys (raise)
+#define HMR_STAR &hm LGUI ASTRK
+#define HMR_DLLR &hm LALT DLLR
+#define HMR_PRCNT &hm LCTRL PRCNT
+#define HMR_CARET &hm LSHFT CARET
+#define HMR_LPAR &hm RSHFT LPAR
+#define HMR_RPAR &hm RCTRL RPAR
+#define HMR_LBKT &hm RALT LBKT
+#define HMR_RBKT &hm RGUI RBKT
 
-/* // Home row keys (func) */
-/* #define HMF_LPSCRN &hm LGUI PSCRN */
-/* #define HMF_F4 &hm LALT F4 */
-/* #define HMF_F5 &hm LCTRL F5 */
-/* #define HMF_F6 &hm LSHFT F6 */
-/* #define HMF_VOL_UP &hm RSHFT K_VOL_UP */
-/* #define HMF_VOL_DN &hm RCTRL K_VOL_DN */
-/* #define HMF_NEXT &hm RALT K_NEXT */
-/* #define HMF_RPSCRN &hm RGUI PSCRN */
+// Home row keys (func)
+#define HMF_LPSCRN &hm LGUI PSCRN
+#define HMF_F4 &hm LALT F4
+#define HMF_F5 &hm LCTRL F5
+#define HMF_F6 &hm LSHFT F6
+#define HMF_VOL_DN &hm RCTRL K_VOL_DN
+#define HMF_VOL_UP &hm RSHFT K_VOL_UP
+#define HMF_NEXT &hm RALT K_NEXT
+#define HMF_RPSCRN &hm RGUI PSCRN
 
  
 
@@ -91,23 +91,23 @@
 // | CAPS |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |  \   |
 //                    | TAB | SPC | ENT |   | ESC | BSPC | DEL |
                         bindings = <
-   &kp RBKT  &kp Q       &kp W      &kp E       &kp R       &kp T    &kp Y &kp U       &kp I       &kp O      &kp P          &kp LBKT
-   &kp GRAVE HM_A HM_S HM_D HM_F &kp G    &kp H HM_J HM_K HM_L HM_SEMI  &kp SQT
-   &kp CAPS  &kp Z       &kp X      &kp C       &kp V       &kp B    &kp N &kp M       &kp COMMA   &kp DOT    &kp FSLH       &kp BSLH
-                         FNC_TAB LWR_SPC RSE_RET   RSE_ESC LWR_BSPC FNC_DEL
+   &kp RBKT   &kp Q  &kp W  &kp E    &kp R    &kp T      &kp Y    &kp U     &kp I      &kp O    &kp P     &kp LBKT
+   &kp GRAVE  HM_A   HM_S   HM_D     HM_F     &kp G      &kp H    HM_J      HM_K       HM_L     HM_SEMI   &kp SQT
+   &kp CAPS   &kp Z  &kp X  &kp C    &kp V    &kp B      &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
+                            FNC_TAB  LWR_SPC  RSE_RET    RSE_ESC  LWR_BSPC  FNC_DEL
                         >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |      |  /  |  7  |  8  |  9  |  +  |   |  V+ | MUTE | HOME | PGUP | INS | NEXT |
+// |      |  /  |  7  |  8  |  9  |  +  |   |  V+ | PLAY | HOME | PGUP | INS | NEXT |
 // |      |  *  |  4  |  5  |  6  |  -  |   | LFT | DWN  |  UP  | RHT  | APP | STOP |
-// |      |  0  |  1  |  2  |  3  |  =  |   |  V- | PLAY | END  | PGDN | DEL | PREV |
+// |      |  0  |  1  |  2  |  3  |  =  |   |  V- | MUTE | END  | PGDN | DEL | PREV |
 //                    |     |     |     |   |     |      |      |
                         bindings = <
-   &trans &kp FSLH &kp N7 &kp N8 &kp N9 &kp PLUS        &kp K_VOL_UP &kp K_MUTE &kp HOME &kp PG_UP &kp INS &kp K_NEXT
-   &trans &hm LGUI ASTRK &hm LALT N4 &hm LCTRL N5 &hm LSHFT N6 &kp MINUS     &kp LEFT     &hm RSHFT DOWN &hm RCTRL UP &hm RALT RIGHT &hm RGUI K_APP &kp K_STOP2
-   &trans &kp N0   &kp N1 &kp N2 &kp N3 &kp EQUAL     &kp K_VOL_DN &kp K_PP   &kp END  &kp PG_DN &kp DEL &kp K_PREV
-                          &trans &trans &trans        &trans       &trans     &trans
+   &trans  &kp FSLH  &kp N7  &kp N8  &kp N9  &kp PLUS     &kp K_VOL_UP &kp K_PP    &kp HOME  &kp PG_UP  &kp INS  &kp K_NEXT
+   &trans  HML_STAR  HML_4   HML_5   HML_6   &kp MINUS    &kp LEFT     HML_DOWN    HML_UP    HML_RIGHT  HML_APP  &kp K_STOP2
+   &trans  &kp N0    &kp N1  &kp N2  &kp N3  &kp EQUAL    &kp K_VOL_DN &kp K_MUTE  &kp END   &kp PG_DN  &kp DEL  &kp K_PREV
+                             &trans  &trans  &trans       &trans       &trans      &trans
                         >;
                 };
                 raise_layer {
@@ -117,10 +117,10 @@
 // |  .  |  )  |  !  |  @  |  #  |  =  |   |  _  |  {  |  }  |  <  |  >  |  \  |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
-   &kp BSLH  &kp FSLH &kp AMPS &kp ASTRK &kp LPAR  &kp PLUS     &kp EQUAL &kp PLUS &kp COLN &kp SEMI &kp PIPE &kp GRAVE
-   &kp COMMA &hm LGUI ASTRK &hm LALT DLLR &hm LCTRL PRCNT &hm LSHFT CARET &kp MINUS    &kp MINUS &hm RSHFT LPAR &hm RCTRL RPAR &hm RALT LBKT &hm RGUI RBKT &kp SQT
-   &kp DOT   &kp RPAR &kp EXCL &kp AT    &kp HASH  &kp EQUAL    &kp UNDER &kp LBRC &kp RBRC &kp LT   &kp GT   &kp BSLH
-                    	       &trans    &trans    &trans       &trans   &trans    &trans
+   &kp BSLH   &kp FSLH  &kp AMPS  &kp ASTRK  &kp LPAR   &kp PLUS     &kp EQUAL  &kp PLUS  &kp COLN  &kp SEMI  &kp PIPE  &kp GRAVE
+   &kp COMMA  HMR_STAR  HMR_DLLR  HMR_PRCNT  HMR_CARET  &kp MINUS    &kp MINUS  HMR_LPAR  HMR_RPAR  HMR_LBKT  HMR_RBKT  &kp SQT
+   &kp DOT    &kp RPAR  &kp EXCL  &kp AT     &kp HASH   &kp EQUAL    &kp UNDER  &kp LBRC  &kp RBRC  &kp LT    &kp GT    &kp BSLH
+                    	          &trans     &trans     &trans       &trans     &trans    &trans
                         >;
                 };
                 func_layer {
@@ -130,10 +130,10 @@
 // | BT_PRV | SCLK  |  F1 |  F2 |  F3 |  F12 |   | STOP | MUTE |  BT1 | BT2  |  BT4  | OUT_USB |
 //                        |     |     |      |   |      |      |      |
                         bindings = <
-   &bt BT_CLR &kp PAUSE_BREAK   &kp F7 &kp F8 &kp F9 &kp F10    &kp K_PP    &kp C_BRI_DN &kp C_BRI_UP &bt BT_SEL 3 &bt BT_SEL 5   &bt BT_CLR
-   &bt BT_NXT &hm LGUI PSCRN &hm LALT F4 &hm LCTRL F5 &hm LSHFT F6 &kp F11    &kp K_PREV  &hm RSHFT K_VOL_UP &hm RCTRL K_VOL_DN &hm RALT K_NEXT &hm RGUI PSCRN &out OUT_BLE
-   &bt BT_PRV &kp SLCK   &kp F1 &kp F2 &kp F3 &kp F12    &kp K_STOP2 &kp K_MUTE   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 4   &out OUT_USB
-                    	       &trans    &trans    &trans       &trans   &trans    &trans
+   &bt BT_CLR  &kp PAUSE_BREAK  &kp F7  &kp F8  &kp F9  &kp F10    &kp K_PP     &kp C_BRI_DN  &kp C_BRI_UP  &bt BT_SEL 3  &bt BT_SEL 5  &bt BT_CLR
+   &bt BT_NXT  HMF_LPSCRN       HMF_F4  HMF_F5  HMF_F6  &kp F11    &kp K_PREV   HMF_VOL_DN    HMF_VOL_UP    HMF_NEXT      HMF_RPSCRN    &out OUT_BLE
+   &bt BT_PRV  &kp SLCK         &kp F1  &kp F2  &kp F3  &kp F12    &kp K_STOP2  &kp K_MUTE    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 4  &out OUT_USB
+                    	                &trans  &trans  &trans     &trans       &trans        &trans
                         >;
                 };
         };
