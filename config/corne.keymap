@@ -14,13 +14,13 @@
 #define RAISE 2
 #define FUNCTIONAL 3
 
-#define FNC_TAB &lt FUNCTIONAL TAB
-#define LWR_SPC &lt LOWER SPACE
-#define RSE_RET &lt RAISE RET
+#define FNC_TAB &mo FUNCTIONAL TAB
+#define LWR_SPC &mo LOWER SPACE
+#define RSE_RET &mo RAISE RET
 
-#define RSE_ESC  &lt RAISE ESC
-#define LWR_BSPC &lt LOWER BSPC
-#define FNC_DEL  &lt FUNCTIONAL DEL
+#define RSE_ESC  &mo RAISE ESC
+#define LWR_BSPC &mo LOWER BSPC
+#define FNC_DEL  &mo FUNCTIONAL DEL
 
 // Home row keys (default)
 #define HM_A &hm LGUI A
