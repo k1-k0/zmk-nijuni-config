@@ -14,13 +14,13 @@
 #define RAISE 2
 #define FUNCTIONAL 3
 
-#define FNC_TAB &mo FUNCTIONAL TAB
-#define LWR_SPC &mo LOWER SPACE
-#define RSE_RET &mo RAISE RET
+#define FNC_TAB &lt FUNCTIONAL TAB
+#define LWR_SPC &lt LOWER SPACE
+#define RSE_RET &lt RAISE RET
 
-#define RSE_ESC  &mo RAISE ESC
-#define LWR_BSPC &mo LOWER BSPC
-#define FNC_DEL  &mo FUNCTIONAL DEL
+#define RSE_ESC  &lt RAISE ESC
+#define LWR_BSPC &lt LOWER BSPC
+#define FNC_DEL  &lt FUNCTIONAL DEL
 
 // Home row keys (default)
 #define HM_A &hm LGUI A
@@ -43,14 +43,12 @@
 #define HML_APP &hm RGUI K_APP
 
 // Home row keys (raise)
-#define HMR_STAR &hm LGUI ASTRK
-#define HMR_DLLR &hm LALT DLLR
-#define HMR_PRCNT &hm LCTRL PRCNT
-#define HMR_CARET &hm LSHFT CARET
-#define HMR_LPAR &hm RSHFT LPAR
-#define HMR_RPAR &hm RCTRL RPAR
-#define HMR_LBKT &hm RALT LBKT
-#define HMR_RBKT &hm RGUI RBKT
+#define HMR_LBSLH &hm LGUI BSLH
+#define HMR_COMMA &hm LCTRL COMMA
+#define HMR_DOT &hm LALT DOT
+#define HMR_GRAVE &hm RGUI GRAVE
+#define HMR_SQT &hm RCTRL SQT
+#define HMR_RBSLH &hm RALT BSLH
 
 // Home row keys (func)
 #define HMF_LPSCRN &hm LGUI PSCRN
@@ -62,10 +60,15 @@
 #define HMF_NEXT &hm RALT K_NEXT
 #define HMF_RPSCRN &hm RGUI PSCRN
 
- 
 
 &mt {
-	tapping-term = <200>;
+	tapping-term-ms = <200>;
+};
+
+&lt {
+	tapping-term-ms = <200>;
+	flavor = "balanced";
+	quick-tap-ms = <0>;
 };
 
 / {
@@ -117,10 +120,10 @@
 // |  .  |  )  |  !  |  @  |  #  |  =  |   |  _  |  {  |  }  |  <  |  >  |  \  |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
-   &kp BSLH   &kp FSLH  &kp AMPS  &kp ASTRK  &kp LPAR   &kp PLUS     &kp EQUAL  &kp PLUS  &kp COLN  &kp SEMI  &kp PIPE  &kp GRAVE
-   &kp COMMA  HMR_STAR  HMR_DLLR  HMR_PRCNT  HMR_CARET  &kp MINUS    &kp MINUS  HMR_LPAR  HMR_RPAR  HMR_LBKT  HMR_RBKT  &kp SQT
-   &kp DOT    &kp RPAR  &kp EXCL  &kp AT     &kp HASH   &kp EQUAL    &kp UNDER  &kp LBRC  &kp RBRC  &kp LT    &kp GT    &kp BSLH
-                    	          &trans     &trans     &trans       &trans     &trans    &trans
+   HMR_LBSLH  &kp FSLH   &kp AMPS  &kp ASTRK  &kp LPAR   &kp PLUS     &kp EQUAL  &kp PLUS  &kp COLN  &kp SEMI  &kp PIPE  HMR_GRAVE
+   HMR_COMMA  &kp ASTRK  &kp DLLR  &kp PRCNT  &kp CARET  &kp MINUS    &kp MINUS  &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT  HMR_SQT
+   HMR_DOT    &kp RPAR   &kp EXCL  &kp AT     &kp HASH   &kp EQUAL    &kp UNDER  &kp LBRC  &kp RBRC  &kp LT    &kp GT    HMR_RBSLH
+                    	           &trans     &trans     &trans       &trans     &trans    &trans
                         >;
                 };
                 func_layer {
