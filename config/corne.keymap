@@ -46,7 +46,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp F14>, <&kp F15>;
-            mods = <(MOD_LGUI|MOD_LALT|MOD_LCTRL|MOD_LSHFT|MOD_RSHFT|MOD_RCTRL|MOD_RALT|MOD_RGUI)>;
+            mods = <(MOD_LGUI|MOD_LALT|MOD_LCTL|MOD_LSFT|MOD_RSFT|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
         };
     };
 
