@@ -9,18 +9,18 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-
 &lt {
-	tapping-term-ms = <200>;
-	quick-tap-ms = <200>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
 };
 
-/ { 
+/ {
     behaviors {
         hrml: hrml {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
+
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
@@ -30,9 +30,10 @@
         };
 
         hrmr: hrmr {
-             compatible = "zmk,behavior-hold-tap";
+            compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
+
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
@@ -41,11 +42,12 @@
             hold-trigger-on-release;
         };
 
-        lang: f14_f15 {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp F14>, <&kp F15>;
-            mods = <(MOD_LGUI|MOD_LALT|MOD_LCTL|MOD_LSFT|MOD_RSFT|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        lang_ht: tap_f14_and_hold_f15 {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
         };
     };
 
@@ -54,19 +56,19 @@
 
         qwe {
             bindings = <
-&kp RBKT   &kp Q       &kp W       &kp E        &kp R        &kp T          &kp Y      &kp U        &kp I        &kp O       &kp P          &kp LBKT
-&kp GRAVE  &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &hrml LSHFT F  &kp G          &kp H      &hrmr RSHFT J  &hrmr RCTRL K  &hrmr RALT L  &hrmr RGUI SEMI  &kp APOS
-&lang     &kp Z       &kp X       &kp C        &kp V        &kp B          &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp BSLH
-                                   &lt 3 TAB    &lt 1 SPACE  &lt 2 ENTER    &lt 2 ESC  &lt 1 BSPC   &lt 3 DEL
+&kp RBKT          &kp Q         &kp W         &kp E          &kp R          &kp T          &kp Y      &kp U          &kp I          &kp O         &kp P            &kp LBKT
+&kp GRAVE         &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &hrml LSHFT F  &kp G          &kp H      &hrmr RSHFT J  &hrmr RCTRL K  &hrmr RALT L  &hrmr RGUI SEMI  &kp APOS
+&lang_ht F14 F15  &kp Z         &kp X         &kp C          &kp V          &kp B          &kp N      &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp BSLH
+                                              &lt 3 TAB      &lt 1 SPACE    &lt 2 ENTER    &lt 2 ESC  &lt 1 BSPC     &lt 3 DEL
             >;
         };
 
         nav {
             bindings = <
-&kp KP_NUMLOCK  &kp KP_DIVIDE         &kp N7       &kp N8        &kp N9        &kp PLUS     &kp CAPS    &kp PG_UP        &kp UP          &kp PAGE_DOWN   &kp DEL       &kp INS
-&kp COMMA       &hrml LGUI KP_ASTERISK  &hrml LALT N4  &hrml LCTRL N5  &hrml LSHFT N6  &kp MINUS    &kp HOME    &hrmr RSHIFT LEFT  &hrmr RCTRL DOWN  &hrmr RALT RIGHT  &hrmr RGUI END  &kp RA(TAB)
-&kp DOT         &kp N0                &kp N1       &kp N2        &kp N3        &kp EQUAL    &caps_word  &kp RC(PG_UP)    &kp K_APP       &kp RC(PG_DN)   &kp PSCRN     &kp RA(RS(TAB))
-                                                   &trans        &trans        &trans       &trans      &trans           &trans
+&kp KP_NUMLOCK  &kp KP_DIVIDE           &kp N7         &kp N8          &kp N9          &kp PLUS     &kp CAPS    &kp PG_UP          &kp UP            &kp PAGE_DOWN     &kp DEL         &kp INS
+&kp COMMA       &hrml LGUI KP_ASTERISK  &hrml LALT N4  &hrml LCTRL N5  &hrml LSHFT N6  &kp MINUS    &kp HOME    &hrmr RSHIFT LEFT  &hrmr RCTRL DOWN  &hrmr RALT RIGHT  &hrmr RGUI END  &kp RG(TAB)
+&kp DOT         &kp N0                  &kp N1         &kp N2          &kp N3          &kp EQUAL    &caps_word  &kp RC(PG_UP)      &kp K_APP         &kp RC(PG_DN)     &kp PSCRN       &kp RS(RG(TAB))
+                                                       &trans          &trans          &trans       &trans      &trans             &trans
             >;
         };
 
@@ -81,10 +83,10 @@
 
         fun {
             bindings = <
-&bootloader   &kp SLCK         &kp F7       &kp F8        &kp F9        &kp F10    &out OUT_BLE  &kp C_BRI_DN      &kp C_VOL_UP        &kp C_BRI_UP     &bt BT_CLR             &bt BT_CLR_ALL
-&sys_reset    &hrml LGUI PSCRN   &hrml LALT F4  &hrml LCTRL F5  &hrml LSHFT F6  &kp F11    &kp K_STOP    &hrmr RSHFT K_PREV  &hrmr RCTRL C_VOL_DN  &hrmr RALT K_NEXT  &hrmr RGUI K_PLAY_PAUSE  &bt BT_SEL 3
-&out OUT_TOG  &kp PAUSE_BREAK  &kp F1       &kp F2        &kp F3        &kp F12    &out OUT_USB  &kp PSCRN         &kp K_MUTE          &bt BT_SEL 0     &bt BT_SEL 1           &bt BT_SEL 2
-                                            &trans        &trans        &trans     &trans        &trans            &trans
+&bootloader   &kp SLCK          &kp F7         &kp F8          &kp F9          &kp F10    &out OUT_BLE  &kp C_BRI_DN        &kp C_VOL_UP          &kp C_BRI_UP       &bt BT_CLR               &bt BT_CLR_ALL
+&sys_reset    &hrml LGUI PSCRN  &hrml LALT F4  &hrml LCTRL F5  &hrml LSHFT F6  &kp F11    &kp K_STOP    &hrmr RSHFT K_PREV  &hrmr RCTRL C_VOL_DN  &hrmr RALT K_NEXT  &hrmr RGUI K_PLAY_PAUSE  &bt BT_SEL 3
+&out OUT_TOG  &kp PAUSE_BREAK   &kp F1         &kp F2          &kp F3          &kp F12    &out OUT_USB  &kp PSCRN           &kp K_MUTE            &bt BT_SEL 0       &bt BT_SEL 1             &bt BT_SEL 2
+                                               &trans          &trans          &trans     &trans        &trans              &trans
             >;
         };
     };
