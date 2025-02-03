@@ -42,7 +42,7 @@
             hold-trigger-on-release;
         };
 
-        lang_ht: tap_f14_and_hold_f15 {
+        lang: tap_f14_and_hold_f15 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -58,7 +58,7 @@
             bindings = <
 &kp RBKT          &kp Q         &kp W         &kp E          &kp R          &kp T          &kp Y      &kp U          &kp I          &kp O         &kp P            &kp LBKT
 &kp GRAVE         &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &hrml LSHFT F  &kp G          &kp H      &hrmr RSHFT J  &hrmr RCTRL K  &hrmr RALT L  &hrmr RGUI SEMI  &kp APOS
-&lang_ht F14 F15  &kp Z         &kp X         &kp C          &kp V          &kp B          &kp N      &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp BSLH
+&lang F15 F14     &kp Z         &kp X         &kp C          &kp V          &kp B          &kp N      &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp BSLH
                                               &lt 3 TAB      &lt 1 SPACE    &lt 2 ENTER    &lt 2 ESC  &lt 1 BSPC     &lt 3 DEL
             >;
         };
