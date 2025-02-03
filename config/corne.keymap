@@ -77,6 +77,34 @@
             key-positions = <19 20>;
             timeout-ms = <24>;
         };
+
+        reset_r {
+            bindings = <&sys_reset>;
+            key-positions = <32 33>;
+            layers = <3>;
+            timeout-ms = <24>;
+        };
+
+        reset_l {
+            bindings = <&sys_reset>;
+            key-positions = <26 27>;
+            layers = <3>;
+            timeout-ms = <24>;
+        };
+
+        boot_l {
+            bindings = <&bootloader>;
+            key-positions = <2 3>;
+            layers = <3>;
+            timeout-ms = <24>;
+        };
+
+        boot_r {
+            bindings = <&bootloader>;
+            key-positions = <8 9>;
+            layers = <3>;
+            timeout-ms = <24>;
+        };
     };
 
     keymap {
@@ -84,16 +112,16 @@
 
         qwe {
             bindings = <
-&kp RBKT       &kp Q         &kp W         &kp E          &kp R          &kp T          &kp Y      &kp U          &kp I          &kp O         &kp P            &kp LBKT
-&kp GRAVE      &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &hrml LSHFT F  &kp G          &kp H      &hrmr RSHFT J  &hrmr RCTRL K  &hrmr RALT L  &hrmr RGUI SEMI  &kp APOS
-&lang F15 F14  &kp Z         &kp X         &kp C          &kp V          &kp B          &kp N      &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp BSLH
-                                           &lt 3 TAB      &lt 1 SPACE    &lt 2 ENTER    &lt 2 ESC  &lt 1 BSPC     &lt 3 DEL
+&kp RBKT   &kp Q         &kp W         &kp E          &kp R          &kp T          &kp Y      &kp U          &kp I          &kp O         &kp P            &kp LBKT
+&kp GRAVE  &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &hrml LSHFT F  &kp G          &kp H      &hrmr RSHFT J  &hrmr RCTRL K  &hrmr RALT L  &hrmr RGUI SEMI  &kp APOS
+&kp MINUS  &kp Z         &kp X         &kp C          &kp V          &kp B          &kp N      &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp BSLH
+                                       &lt 3 TAB      &lt 1 SPACE    &lt 2 ENTER    &lt 2 ESC  &lt 1 BSPC     &lt 3 DEL
             >;
         };
 
         nav {
             bindings = <
-&kp KP_NUMLOCK  &kp KP_DIVIDE           &kp N7         &kp N8          &kp N9          &kp PLUS     &kp CAPS    &kp PG_UP          &kp UP            &kp PAGE_DOWN     &kp DEL         &kp INS
+&kp KP_NUMLOCK  &kp KP_DIVIDE           &kp N7         &kp N8          &kp N9          &kp PLUS     &kp CAPS    &kp PG_UP          &kp UP            &kp PAGE_DOWN     &key_repeat     &kp INS
 &kp COMMA       &hrml LGUI KP_ASTERISK  &hrml LALT N4  &hrml LCTRL N5  &hrml LSHFT N6  &kp MINUS    &kp HOME    &hrmr RSHIFT LEFT  &hrmr RCTRL DOWN  &hrmr RALT RIGHT  &hrmr RGUI END  &kp RG(TAB)
 &kp DOT         &kp N0                  &kp N1         &kp N2          &kp N3          &kp EQUAL    &caps_word  &kp RC(PG_UP)      &kp K_APP         &kp RC(PG_DN)     &kp PSCRN       &kp RS(RG(TAB))
                                                        &trans          &trans          &trans       &trans      &trans             &trans
@@ -102,19 +130,19 @@
 
         sym {
             bindings = <
-&kp BSLH   &kp FSLH   &kp AMPS  &kp STAR   &kp LPAR   &kp PLUS     &kp EQUAL  &kp LBRC  &kp RBRC  &kp TILDE  &kp PIPE   &kp DQT
-&kp COMMA  &kp ASTRK  &kp DLLR  &kp PRCNT  &kp CARET  &kp MINUS    &kp MINUS  &kp LPAR  &kp RPAR  &kp LT     &kp COLON  &kp SQT
-&kp DOT    &kp RPAR   &kp EXCL  &kp AT     &kp HASH   &kp EQUAL    &kp UNDER  &kp LBKT  &kp RBKT  &kp GT     &kp QMARK  &kp GRAVE
-                                &trans     &trans     &trans       &trans     &trans    &trans
+&kp BSLH   &kp FSLH          &kp AMPS         &kp STAR           &kp LPAR           &kp PLUS     &kp EQUAL  &kp GRAVE         &kp LBRC          &kp RBRC         &kp QMARK      &kp PLUS
+&kp COMMA  &hrmr LGUI ASTRK  &hrmr LALT DLLR  &hrmr LCTRL PRCNT  &hrmr LSHFT CARET  &kp MINUS    &kp MINUS  &hrmr RSHIFT SQT  &hrmr RCTRL LBKT  &hrmr RALT RBKT  &hrmr RGUI LT  &kp PIPE
+&kp DOT    &kp RPAR          &kp EXCL         &kp AT             &kp HASH           &kp EQUAL    &kp UNDER  &kp DQT           &kp LPAR          &kp RPAR         &kp TILDE      &kp PIPE
+                                              &trans             &trans             &trans       &trans     &trans            &trans
             >;
         };
 
         fun {
             bindings = <
-&bootloader   &kp SLCK          &kp F7         &kp F8          &kp F9          &kp F10    &out OUT_BLE  &kp C_BRI_DN        &kp C_VOL_UP          &kp C_BRI_UP       &bt BT_CLR               &bt BT_CLR_ALL
-&sys_reset    &hrml LGUI PSCRN  &hrml LALT F4  &hrml LCTRL F5  &hrml LSHFT F6  &kp F11    &kp C_STOP    &hrmr RSHFT C_PREV  &hrmr RCTRL C_VOL_DN  &hrmr RALT C_NEXT  &hrmr RGUI C_PLAY_PAUSE  &bt BT_SEL 3
-&out OUT_TOG  &kp PAUSE_BREAK   &kp F1         &kp F2          &kp F3          &kp F12    &out OUT_USB  &kp PSCRN           &kp C_MUTE            &bt BT_SEL 0       &bt BT_SEL 1             &bt BT_SEL 2
-                                               &trans          &trans          &trans     &trans        &trans              &trans
+&bt BT_CLR_ALL  &kp SLCK          &kp F7         &kp F8          &kp F9          &kp F10    &out OUT_BLE  &kp C_BRI_DN        &kp C_VOL_UP          &kp C_BRI_UP       &bt BT_SEL 4             &bt BT_SEL 3
+&bt BT_CLR      &hrml LGUI PSCRN  &hrml LALT F4  &hrml LCTRL F5  &hrml LSHFT F6  &kp F11    &kp C_STOP    &hrmr RSHFT C_PREV  &hrmr RCTRL C_VOL_DN  &hrmr RALT C_NEXT  &hrmr RGUI C_PLAY_PAUSE  &bt BT_SEL 2
+&out OUT_TOG    &kp PAUSE_BREAK   &kp F1         &kp F2          &kp F3          &kp F12    &out OUT_USB  &kp PSCRN           &kp C_MUTE            &key_repeat        &bt BT_SEL 1             &bt BT_SEL 1
+                                                 &trans          &trans          &trans     &trans        &trans              &trans
             >;
         };
     };
