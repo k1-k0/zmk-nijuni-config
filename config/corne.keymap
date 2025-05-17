@@ -55,24 +55,28 @@
             bindings = <&kp F14>;
             key-positions = <14 15>;
             timeout-ms = <24>;
+            require-prior-idle-ms = <RPIDMS>;
         };
 
         f15 {
             bindings = <&kp F15>;
             key-positions = <20 21>;
             timeout-ms = <24>;
+            require-prior-idle-ms = <RPIDMS>;
         };
 
         equal {
             bindings = <&kp EQUAL>;
             key-positions = <15 16>;
             timeout-ms = <24>;
+            require-prior-idle-ms = <RPIDMS>;
         };
 
         minus {
             bindings = <&kp MINUS>;
             key-positions = <19 20>;
             timeout-ms = <24>;
+            require-prior-idle-ms = <RPIDMS>;
         };
 
         reset_r {
