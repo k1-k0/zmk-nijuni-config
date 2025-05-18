@@ -13,7 +13,6 @@
 #define QTMS    175
 #define RPIDMS  125
 
-
 &lt {
     tapping-term-ms = <TTMS>;
     quick-tap-ms = <QTMS>;
@@ -106,6 +105,20 @@
             layers = <3>;
             timeout-ms = <24>;
         };
+
+        lf16 {
+            bindings = <&kp F16>;
+            key-positions = <15 27>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <RPIDMS>;
+        };
+
+        rf16 {
+            bindings = <&kp F16>;
+            key-positions = <20 32>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <RPIDMS>;
+        };
     };
 
     keymap {
@@ -122,19 +135,19 @@
 
         nav {
             bindings = <
-&kp KP_NUMLOCK  &kp KP_DIVIDE           &kp N7         &kp N8          &kp N9          &kp PLUS     &kp CAPS    &kp PG_UP          &kp UP            &kp PAGE_DOWN     &key_repeat     &kp INS
+&kp KP_NUMLOCK  &kp KP_DIVIDE           &kp N7         &kp N8          &kp N9          &kp PLUS     &kp CAPS    &kp PG_UP          &kp UP            &kp PAGE_DOWN     &kp PSCRN       &kp INS
 &kp COMMA       &hrml LGUI KP_ASTERISK  &hrml LALT N4  &hrml LCTRL N5  &hrml LSHFT N6  &kp MINUS    &kp HOME    &hrmr RSHIFT LEFT  &hrmr RCTRL DOWN  &hrmr RALT RIGHT  &hrmr RGUI END  &kp RG(TAB)
-&kp DOT         &kp N0                  &kp N1         &kp N2          &kp N3          &kp EQUAL    &caps_word  &kp RC(PG_UP)      &kp K_APP         &kp RC(PG_DN)     &kp PSCRN       &kp RS(RG(TAB))
+&kp DOT         &kp N0                  &kp N1         &kp N2          &kp N3          &kp EQUAL    &caps_word  &kp RC(PG_UP)      &kp K_APP         &kp RC(PG_DN)     &kp F16         &key_repeat
                                                        &trans          &trans          &trans       &trans      &trans             &trans
             >;
         };
 
         sym {
             bindings = <
-&kp BSLH   &kp FSLH          &kp AMPS         &kp STAR           &kp LPAR           &kp PLUS     &kp EQUAL  &kp GRAVE         &kp LBRC          &kp RBRC         &kp QMARK      &kp PLUS
-&kp COMMA  &hrmr LGUI ASTRK  &hrmr LALT DLLR  &hrmr LCTRL PRCNT  &hrmr LSHFT CARET  &kp MINUS    &kp MINUS  &hrmr RSHIFT SQT  &hrmr RCTRL LBKT  &hrmr RALT RBKT  &hrmr RGUI LT  &kp GT
-&kp DOT    &kp RPAR          &kp EXCL         &kp AT             &kp HASH           &kp EQUAL    &kp UNDER  &kp DQT           &kp LPAR          &kp RPAR         &kp TILDE      &kp PIPE
-                                              &trans             &trans             &trans       &trans     &trans            &trans
+&kp BSLH   &kp FSLH          &kp AMPS         &kp STAR           &kp LPAR           &kp PLUS     &kp TILDE  &kp EQUAL          &kp BSLH          &kp PIPE         &kp GRAVE       &kp QMARK
+&kp COMMA  &hrmr LGUI ASTRK  &hrmr LALT DLLR  &hrmr LCTRL PRCNT  &hrmr LSHFT CARET  &kp MINUS    &kp MINUS  &hrmr RSHIFT LPAR  &hrmr RCTRL LBKT  &hrmr RALT LBRC  &hrmr RGUI SQT  &kp LT
+&kp DOT    &kp RPAR          &kp EXCL         &kp AT             &kp HASH           &kp EQUAL    &kp UNDER  &kp RPAR           &kp RBKT          &kp RBRC         &kp DQT         &kp GT
+                                              &trans             &trans             &trans       &trans     &trans             &trans
             >;
         };
 
