@@ -126,10 +126,10 @@
 
         qwe {
             bindings = <
-&kp RBKT                      &kp Q         &kp W         &kp E          &kp R          &kp T          &kp Y      &kp U          &kp I          &kp O         &kp P            &kp LBKT
-&kp GRAVE                     &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &hrml LSHFT F  &kp G          &kp H      &hrmr RSHFT J  &hrmr RCTRL K  &hrmr RALT L  &hrmr RGUI SEMI  &kp APOS
-&hrml LS(LA(LC(LGUI))) MINUS  &kp Z         &kp X         &kp C          &kp V          &kp B          &kp N      &kp M          &kp COMMA      &kp DOT       &kp FSLH         &hrmr RS(RA(RC(RGUI))) BSLH
-                                                          &lt 3 TAB      &lt 1 SPACE    &lt 2 ENTER    &lt 2 ESC  &lt 1 BSPC     &lt 3 DEL
+&kp RBKT   &kp Q         &kp W         &kp E          &kp R          &kp T                       &kp Y                     &kp U          &kp I          &kp O         &kp P            &kp LBKT
+&kp GRAVE  &hrml LGUI A  &hrml LALT S  &hrml LCTRL D  &hrml LSHFT F  &hrml LS(LA(LC(LGUI))) G    &hrmr RS(RA(RC(RGUI))) H  &hrmr RSHFT J  &hrmr RCTRL K  &hrmr RALT L  &hrmr RGUI SEMI  &kp APOS
+&kp MINUS  &kp Z         &kp X         &kp C          &kp V          &kp B                       &kp N                     &kp M          &kp COMMA      &kp DOT       &kp FSLH         &kp BSLH
+                                       &lt 3 TAB      &lt 1 SPACE    &lt 2 ENTER                 &lt 2 ESC                 &lt 1 BSPC     &lt 3 DEL
             >;
         };
 
