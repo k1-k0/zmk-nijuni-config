@@ -113,16 +113,16 @@
             require-prior-idle-ms = <CH_RPI_MS>;
         };
 
-        rdlng {
+        ldlng {
             bindings = <&kp LNG>;
             key-positions = <15 37>;
             timeout-ms = <24>;
             require-prior-idle-ms = <CV_RPI_MS>;
         };
 
-        ldlng {
+        rdlng {
             bindings = <&kp LNG>;
-            key-positions = <21 40>;
+            key-positions = <20 40>;
             timeout-ms = <24>;
             require-prior-idle-ms = <CV_RPI_MS>;
         };
