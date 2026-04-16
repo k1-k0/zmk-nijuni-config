@@ -68,7 +68,7 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <160>;
-            require-prior-idle-ms = <HMR_RPI_MS>;
+            require-prior-idle-ms = <RPIDMS>;
         };
     };
 
