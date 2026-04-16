@@ -180,7 +180,7 @@
         num {
             bindings = < 
 &kp KP_NUMLOCK  &kp KP_DIVIDE     &kp N7             &kp N8          &kp N9          &kp PLUS                              &kp KP_NUMLOCK  &kp LPAR              &kp RPAR              &kp CARET               &kp ENTER              &trans
-&kp COMMA       &lpht LCMD N0     &lpht LEFT_ALT N4  &lpht LCTRL N5  &lpht LSHFT N6  &kp MINUS                             &kp KP_EQUAL    &rpht RSHFT KP_MINUS  &rpht RCTRL KP_PLUS   &rpht RALT KP_MULTIPLY  &rpht RGUI KP_DIVIDE   &trans
+&kp COMMA       &hrml LCMD N0     &hrml LEFT_ALT N4  &hrml LCTRL N5  &hrml LSHFT N6  &kp MINUS                             &kp KP_EQUAL    &hrmr RSHFT KP_MINUS  &hrmr RCTRL KP_PLUS   &hrmr RALT KP_MULTIPLY  &hrmr RGUI KP_DIVIDE   &trans
 &kp DOT         &kp KP_ASTERISK   &kp N1             &kp N2          &kp N3          &kp EQUAL                             &trans          &trans                &kp KP_COMMA          &kp KP_DOT              &trans                 &trans
                                                                      &trans          &trans        &trans      &trans      &trans          &trans
             >;
