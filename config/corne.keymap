@@ -113,6 +113,20 @@
             require-prior-idle-ms = <CH_RPI_MS>;
         };
 
+        rdlng {
+            bindings = <&kp LNG>;
+            key-positions = <15 37>;
+            timeout-ms = <24>;
+            require-prior-idle-ms = <CV_RPI_MS>;
+        };
+
+        ldlng {
+            bindings = <&kp LNG>;
+            key-positions = <21 40>;
+            timeout-ms = <24>;
+            require-prior-idle-ms = <CV_RPI_MS>;
+        };
+
         rbslh {
             bindings = <&kp BSLH>;
             key-positions = <15 16>;
@@ -128,28 +142,28 @@
         };
 
         lhyper {
-            bindings = <&kp LHYPER>;
+            bindings = <&sk LHYPER>;\
             key-positions = <15 17>;
             timeout-ms = <30>;
             require-prior-idle-ms = <CH_RPI_MS>;
         };
 
         rhyper {
-            bindings = <&kp RHYPER>;
+            bindings = <&sk RHYPER>;
             key-positions = <18 20>;
             timeout-ms = <30>;
             require-prior-idle-ms = <CH_RPI_MS>;
         };
 
         ldhyper {
-            bindings = <&kp LHYPER>;
+            bindings = <&sk LHYPER>;
             key-positions = <15 28>;
             timeout-ms = <30>;
             require-prior-idle-ms = <CV_RPI_MS>;
         };
 
         rdhyper {
-            bindings = <&kp RHYPER>;
+            bindings = <&sk RHYPER>;
             key-positions = <20 31>;
             timeout-ms = <30>;
             require-prior-idle-ms = <CV_RPI_MS>;
