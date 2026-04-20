@@ -170,14 +170,14 @@
         };
 
         lthyper {
-            bindings = <&kp LNG>;
+            bindings = <&sk LHYPER>;
             key-positions = <16 37>;
             timeout-ms = <24>;
             require-prior-idle-ms = <CV_RPI_MS>;
         };
 
         rthyper {
-            bindings = <&kp LNG>;
+            bindings = <&sk RHYPER>;
             key-positions = <19 40>;
             timeout-ms = <24>;
             require-prior-idle-ms = <CV_RPI_MS>;
