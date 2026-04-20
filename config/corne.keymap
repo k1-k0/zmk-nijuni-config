@@ -190,28 +190,28 @@
 
         lcopy {
             bindings = <&kp _COPY>;
-            key-positions = <16 27>;
+            key-positions = <37 27>;
             timeout-ms = <24>;
             require-prior-idle-ms = <CV_RPI_MS>;
         };
 
         lpaste {
             bindings = <&kp _PASTE>;
-            key-positions = <16 28>;
+            key-positions = <37 28>;
             timeout-ms = <24>;
             require-prior-idle-ms = <CV_RPI_MS>;
         };
 
         lcut {
             bindings = <&kp _CUT>;
-            key-positions = <16 26>;
+            key-positions = <37 26>;
             timeout-ms = <24>;
             require-prior-idle-ms = <CV_RPI_MS>;
         };
 
         lundo {
             bindings = <&kp _UNDO>;
-            key-positions = <16 25>;
+            key-positions = <37 25>;
             timeout-ms = <24>;
             require-prior-idle-ms = <CV_RPI_MS>;
         };
