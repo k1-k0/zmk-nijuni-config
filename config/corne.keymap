@@ -20,6 +20,11 @@
 #define MSHFT &mshft RSHFT 0
 #define LNG F18
 
+#define _COPY  LG(C)
+#define _PASTE LG(V)
+#define _CUT   LG(X)
+#define _UNDO  LG(Z)
+
 &lt {
     tapping-term-ms = <TTMS>;
     quick-tap-ms = <QTMS>;
@@ -182,6 +187,62 @@
             timeout-ms = <24>;
             require-prior-idle-ms = <CV_RPI_MS>;
         };
+
+        lcopy {
+            bindings = <&kp _COPY>;
+            key-positions = <16 27>;
+            timeout-ms = <24>;
+            require-prior-idle-ms = <CV_RPI_MS>;
+        };
+
+        lpaste {
+            bindings = <&kp _PASTE>;
+            key-positions = <16 28>;
+            timeout-ms = <24>;
+            require-prior-idle-ms = <CV_RPI_MS>;
+        };
+
+        lcut {
+            bindings = <&kp _CUT>;
+            key-positions = <16 26>;
+            timeout-ms = <24>;
+            require-prior-idle-ms = <CV_RPI_MS>;
+        };
+
+        lundo {
+            bindings = <&kp _UNDO>;
+            key-positions = <16 25>;
+            timeout-ms = <24>;
+            require-prior-idle-ms = <CV_RPI_MS>;
+        };
+
+        rcopy {
+            bindings = <&kp _COPY>;
+            key-positions = <40 32>;
+            timeout-ms = <24>;
+            require-prior-idle-ms = <CV_RPI_MS>;
+        };
+
+        rpaste {
+            bindings = <&kp _PASTE>;
+            key-positions = <40 31>;
+            timeout-ms = <24>;
+            require-prior-idle-ms = <CV_RPI_MS>;
+        };
+
+        rcut {
+            bindings = <&kp _CUT>;
+            key-positions = <40 33>;
+            timeout-ms = <24>;
+            require-prior-idle-ms = <CV_RPI_MS>;
+        };
+
+        rundo {
+            bindings = <&kp _UNDO>;
+            key-positions = <40 34>;
+            timeout-ms = <24>;
+            require-prior-idle-ms = <CV_RPI_MS>;
+        };
     };
 
     keymap {
@@ -198,10 +259,10 @@
 
         nav {
             bindings = <
-&kp KP_NUMLOCK  &sk LHYPER   &kp ESC     &kp LS(TAB)    &app_swap  &kp CAPS                              &kp HOME    &kp PG_DN          &kp PG_UP       &kp END           &kp PSCRN       &kp INS
-&kp COMMA       &sk LGUI     &sk LALT    &sk LCTRL      &sk LSHFT  &caps_word                            &kp LEFT    &hrmr RSHIFT DOWN  &hrmr RCTRL UP  &hrmr RALT RIGHT  &hrmr RGUI ESC  &kp RG(TAB)
-&kp DOT         &kp LS(TAB)  &tbbr       &kp LS(GRAVE)  &appw_swap &kp ENTER                             &kp ENTER   &kp TAB            &kp BSPC        &kp DEL           &kp K_APP       &key_repeat
-                                                        &trans     &trans       &trans       &trans      &trans      &trans
+&kp _CUT   &sk LHYPER   &kp ESC     &kp LS(TAB)    &app_swap  &kp CAPS                              &kp HOME    &kp PG_DN          &kp PG_UP       &kp END           &kp PSCRN       &kp INS
+&kp _COPY  &sk LGUI     &sk LALT    &sk LCTRL      &sk LSHFT  &caps_word                            &kp LEFT    &hrmr RSHIFT DOWN  &hrmr RCTRL UP  &hrmr RALT RIGHT  &hrmr RGUI ESC  &kp RG(TAB)
+&kp _PASTE &kp LS(TAB)  &tbbr       &kp LS(GRAVE)  &appw_swap &kp ENTER                             &kp ENTER   &kp TAB            &kp BSPC        &kp DEL           &kp K_APP       &key_repeat
+                                                   &trans     &trans       &trans       &trans      &trans      &trans
             >;
         };
 
