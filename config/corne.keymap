@@ -168,6 +168,20 @@
             timeout-ms = <30>;
             require-prior-idle-ms = <CV_RPI_MS>;
         };
+
+        lthyper {
+            bindings = <&kp LNG>;
+            key-positions = <16 37>;
+            timeout-ms = <24>;
+            require-prior-idle-ms = <CV_RPI_MS>;
+        };
+
+        rthyper {
+            bindings = <&kp LNG>;
+            key-positions = <19 40>;
+            timeout-ms = <24>;
+            require-prior-idle-ms = <CV_RPI_MS>;
+        };
     };
 
     keymap {
