@@ -30,6 +30,11 @@
     quick-tap-ms = <QTMS>;
 };
 
+&sk {
+    release-after-ms = <900>;
+    quick-release;
+};
+
 / {
     behaviors {
         hrml: hrml {
@@ -259,10 +264,10 @@
 
         nav {
             bindings = <
-&kp _CUT   &sk LHYPER   &kp ESC     &kp LS(TAB)    &app_swap  &kp CAPS                              &kp HOME    &kp PG_DN          &kp PG_UP       &kp END           &kp PSCRN       &kp INS
-&kp _COPY  &sk LGUI     &sk LALT    &sk LCTRL      &sk LSHFT  &caps_word                            &kp LEFT    &hrmr RSHIFT DOWN  &hrmr RCTRL UP  &hrmr RALT RIGHT  &hrmr RGUI ESC  &kp RG(TAB)
-&kp _PASTE &kp LS(TAB)  &tbbr       &kp LS(GRAVE)  &appw_swap &kp ENTER                             &kp ENTER   &kp TAB            &kp BSPC        &kp DEL           &kp K_APP       &key_repeat
-                                                   &trans     &trans       &trans       &trans      &trans      &trans
+&kp _CUT   &sk LHYPER   &kp ESC     &kp LS(TAB)    &app_swap  &kp CAPS                              &kp HOME     &kp PG_DN          &kp PG_UP       &kp END           &kp PSCRN       &kp INS
+&kp _COPY  &sk LGUI     &sk LALT    &sk LCTRL      &sk LSHFT  &caps_word                            &kp LEFT     &hrmr RSHIFT DOWN  &hrmr RCTRL UP  &hrmr RALT RIGHT  &hrmr RGUI ESC  &kp RG(TAB)
+&kp _PASTE &kp LS(TAB)  &tbbr       &kp LS(GRAVE)  &appw_swap &kp ENTER                             &kp ENTER    &kp TAB            &kp BSPC        &kp DEL           &kp K_APP       &key_repeat
+                                                   &trans     &trans       &trans       &trans      &kp K_CANCEL &trans
             >;
         };
 
